@@ -21,6 +21,13 @@ html, body {
     align-items: center;
     overflow: hidden;
 }
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('media/bgimage.jpg'); 
+    background-position: center; 
+    background-repeat: no-repeat; 
 
 .backgroundclip {
     position: absolute;
