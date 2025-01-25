@@ -28,7 +28,7 @@ html, body {
     background-image: url('media/bgimage.jpg'); 
     background-position: center; 
     background-repeat: no-repeat; 
-
+}
 .backgroundclip {
     position: absolute;
     top: 0;
