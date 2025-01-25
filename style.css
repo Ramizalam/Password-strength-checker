@@ -1,5 +1,4 @@
-
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,24 +10,22 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-
+/* Container styles */
 .container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh; 
+    background-image: url('media/bgimage.jpg'); /* Fallback background image */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-.container {
-    position: relative;
-    width: 100%;
-    height: 100vh; 
-    background-image: url('media/bgimage.jpg'); 
-    background-position: center; 
-    background-repeat: no-repeat; 
-}
+
+/* Video styles */
 .backgroundclip {
     position: absolute;
     top: 0;
@@ -39,9 +36,10 @@ html, body {
     z-index: -1;
 }
 
+/* Parent container styles */
 .parent {
     width: 90%;
-    height: 50%;
+    max-width: 600px;
     background-color: rgba(247, 92, 3, 0.9);
     padding: 20px;
     border-radius: 10px;
@@ -52,17 +50,19 @@ html, body {
     text-align: center;
 }
 
+/* Header styles */
 .parent h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #fff;
-    margin-top: 90px;
+    margin-top: 20px;
 }
 
+/* Input styles */
 input {
     width: 100%;
     height: 50px;
-    margin: 40px;
+    margin: 20px 0;
     font-size: 1rem;
     border: none;
     outline: none;
@@ -70,58 +70,73 @@ input {
     border-radius: 5px;
 }
 
+/* Strength indicator styles */
 .strength {
     font-size: 1.2rem;
     font-weight: 500;
     color: #fff;
+    margin-top: 10px;
 }
-.navbar{
+
+/* Navbar styles */
+.navbar {
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px;
-    height: 6%;
+    padding: 10px 20px;
     align-items: center;
     background-color: rgb(19,33,54);
 }
-.logo{
-    width: 50px;
-    display: flex;
-    font-family: "poppins";
-    font-size: 26px;
+
+.logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
     color: white;
+    display: flex;
     align-items: center;
     cursor: pointer;
 }
-.nav{
-    width: 30%;
-    height: 100%;
+
+.nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
-.nav h3{
-    height: 100%;
-  font-weight: 44;
-  font-size: 21px;
-  color: white;
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
-  cursor:pointer;
+
+.nav h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
 }
-.nav h3:hover{
+
+.nav h3:hover {
     background-color: #fff;
-    color: rgb(19,33,54) ;
+    color: rgb(19,33,54);
 }
+
+/* Media queries for larger screens */
 @media (min-width: 768px) {
     .parent h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     input {
         height: 60px;
         font-size: 1.2rem;
     }
+    .navbar {
+        padding: 20px;
+    }
+    .logo {
+        font-size: 2rem;
+    }
+    .nav h3 {
+        font-size: 1.2rem;
+    }
 }
 
+/* Media queries for mobile devices */
 @media (max-width: 480px) {
     .parent {
         width: 95%;
@@ -129,7 +144,7 @@ input {
     }
 
     .parent h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     input {
@@ -139,5 +154,28 @@ input {
 
     .strength {
         font-size: 1rem;
+    }
+
+    .container {
+        background-image: url('media/bgmobileimg.jpg'); /* Mobile-specific background image */
+    }
+
+    .backgroundclip {
+        display: none; 
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav h3 {
+        font-size: 0.9rem;
+        margin: 5px 0;
     }
 }
