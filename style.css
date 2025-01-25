@@ -1,0 +1,136 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.backgroundclip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.parent {
+    width: 90%;
+    height: 50%;
+    background-color: rgba(247, 92, 3, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.parent h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 90px;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    margin: 40px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.strength {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    height: 6%;
+    align-items: center;
+    background-color: rgb(19,33,54);
+}
+.logo{
+    width: 50px;
+    display: flex;
+    font-family: "poppins";
+    font-size: 26px;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
+.nav{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav h3{
+    height: 100%;
+  font-weight: 44;
+  font-size: 21px;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  cursor:pointer;
+}
+.nav h3:hover{
+    background-color: #fff;
+    color: rgb(19,33,54) ;
+}
+@media (min-width: 768px) {
+    .parent h1 {
+        font-size: 3rem;
+    }
+    input {
+        height: 60px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .parent {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .parent h1 {
+        font-size: 2rem;
+    }
+
+    input {
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .strength {
+        font-size: 1rem;
+    }
+}
